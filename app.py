@@ -53,9 +53,11 @@ col1.subheader('Select your hardware')
 
 # Selectboxes
 with col1:
-	cpu_input = st.selectbox('Select CPU:', options=cpus, help='Maybe')
+	cpu_input = st.selectbox('Select CPU:', options=cpus, help='Start typing your CPU model and '
+															   'select from the drop down list 🚀')
 with col1:
-	gpu_input = st.selectbox('Select GPU:', options=gpus, help='Maybe')
+	gpu_input = st.selectbox('Select GPU:', options=gpus, help='Start typing your GPU model and '
+															   'select from the drop down list 🚀')
 
 # Defining output df
 df = pd.DataFrame(data=None, index=game_name, columns=setting, dtype=int, copy=None)
@@ -71,5 +73,5 @@ df = df.astype('int')
 col2.dataframe(df.style.background_gradient(cmap=cmap, vmin=0, vmax=150), use_container_width=True)
 
 # Final message
-col1.success('Thank you for interacting with this model. '
+st.success('Thank you for interacting with this model. '
 			 'You can find the source code on [my GitHub](https://github.com/VasilyBakshaev/FPS_Games)')
