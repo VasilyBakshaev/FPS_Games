@@ -71,4 +71,5 @@ df = df.astype('int')
 col2.dataframe(df.style.background_gradient(cmap=cmap, vmin=0, vmax=150), use_container_width=True)
 
 # Final message
-col1.success('Thank you for interacting with this model. You can find the source code on [my GitHub](ya.ru)')
+col1.success('Thank you for interacting with this model. '
+			 'You can find the source code on [my GitHub](https://github.com/VasilyBakshaev/FPS_Games)')
